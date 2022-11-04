@@ -52,12 +52,9 @@ proxy-groups:
       - 🎯 全球直连
   - name: NF服务
     proxies:
-      - http_proxy
+      - Proxy
       - US
-      - 网易云音乐
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 600
+    type: select
   - name: 网易云
     proxies:
       - http_proxy
