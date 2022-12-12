@@ -7,7 +7,16 @@ external-controller: ':9090'
 proxies:
   - {"type":"http","name":"http_proxy","server":"155.248.169.205","port":70,"udp":true}
   - {"type":"vmess","name":"US","ws-opts":{"path":"/"},"server":"rn.shii69.top","port":443,"uuid":"5169f280-7d45-44ba-bba2-673fc3c13746","alterId":64,"cipher":"auto","network":"ws","tls":true}
-  - {"type":"ss","name":"网易云音乐","server":"music.desperadoj.com","port":30001,"cipher":"aes-128-gcm","password":"desperadoj.com_free_proxy_etg0"}
+proxy-providers:
+ NeteaseMusic:
+    type: http
+    path: ./Proxy/NeteaseMusic.yaml
+    url: https://cdn.staticaly.com/gh/DesperadoJ/Rules-for-UnblockNeteaseMusic/master/Clash/Proxy/NeteaseMusic.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 proxy-groups:
   - name: Proxy
     type: select
