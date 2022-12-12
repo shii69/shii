@@ -20,18 +20,22 @@ proxy-providers:
 proxy-groups:
   - name: Proxy
     type: select
+    use:
+      - NeteaseMusic
     proxies:
       - http_proxy
       - US
-      - NeteaseMusic
+      
     _index: 0
   - name: 🚀 节点选择
     type: select
+    use:
+      - NeteaseMusic
     proxies:
       - DIRECT
       - http_proxy
       - US
-      - NeteaseMusic
+      
     _index: 1
   - name: 🌍 国外媒体
     type: select
@@ -41,7 +45,7 @@ proxy-groups:
       - 🎯 全球直连
       - http_proxy
       - US
-      - NeteaseMusic
+      
   - name: 📲 电报信息
     type: select
     proxies:
@@ -67,10 +71,12 @@ proxy-groups:
       
     type: select
   - name: 网易云
+    use:
+      - NeteaseMusic
     proxies:
       - http_proxy
       - US
-      - NeteaseMusic
+      
     type: select
   - name: 📢 谷歌FCM
     type: select
