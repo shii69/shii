@@ -4,6 +4,8 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
+proxies:
+  - {"type":"http","name":"http_proxy","server":"155.248.169.205","port":70,"udp":true}
 proxy-providers:
   foo:
     type: http
