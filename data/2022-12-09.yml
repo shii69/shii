@@ -39,6 +39,7 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
+      - http_proxy
       - DIRECT  
     use:
       - NeteaseMusic
@@ -47,6 +48,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
+      - http_proxy
       - DIRECT
     use:
       - NeteaseMusic
@@ -87,6 +89,7 @@ proxy-groups:
     use:
       - NeteaseMusic
     proxies:
+      - http_proxy
       - Proxy
     type: select
   - name: 📢 谷歌FCM
