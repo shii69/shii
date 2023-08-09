@@ -1,0 +1,121 @@
+mode: Rule
+mixed-port: 7890
+dns:
+  enable: true
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - "[2400:3200::1]:53"
+    - https://1.12.12.12/dns-query
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - apps.apple.com
+    - lens.l.google.com
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    - "*.mcdn.bilivideo.cn"
+    - WORKGROUP
+    - "*.logon.battlenet.com.cn"
+    - "*.logon.battle.net"
+    - stun.l.google.com
+proxies:
+  - type: vmess
+    name: US
+    ws-opts:
+      path: /
+    server: rn.shii69.top
+    port: 443
+    uuid: 5169f280-7d45-44ba-bba2-673fc3c13746
+    alterId: 64
+    cipher: auto
+    network: ws
+    tls: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - US
+      - DIRECT
+  - name: 📺 国际影视
+    type: select
+    proxies:
+      - US
+      - DIRECT
+  - name: 📽️ 内地影视
+    type: select
+    proxies:
+      - US
+      - DIRECT
+rule-providers:
+  Streaming:
+    type: http
+    behavior: classical
+    path: ./Provider/RuleSet/Streaming/Streaming.yaml
+    url: https://littleuniverse.de/gh/HotKids/Rules/master/Clash/RuleSet/Streaming.yaml
+    interval: 86400
+  CNTV:
+    type: http
+    behavior: classical
+    path: ./Provider/RuleSet/Streaming/CNTV.yaml
+    url: https://littleuniverse.de/gh/HotKids/Rules/master/Clash/RuleSet/CNTV.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://littleuniverse.de/gh/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://littleuniverse.de/gh/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://littleuniverse.de/gh/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+rules:
+  - DOMAIN,littleuniverse.de,DIRECT
+  - RULE-SET,private,DIRECT
+  - DOMAIN,api.smoot.apple.com,DIRECT
+  - DOMAIN,captive.apple.com,DIRECT
+  - DOMAIN,configuration.apple.com,DIRECT
+  - DOMAIN,guzzoni.apple.com,DIRECT
+  - DOMAIN,smp-device-content.apple.com,DIRECT
+  - DOMAIN,xp.apple.com,DIRECT
+  - DOMAIN-SUFFIX,ess.apple.com,DIRECT
+  - DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
+  - DOMAIN-SUFFIX,push.apple.com,DIRECT
+  - DOMAIN,aod.itunes.apple.com,DIRECT
+  - DOMAIN,mesu.apple.com,DIRECT
+  - DOMAIN,api.smoot.apple.cn,DIRECT
+  - DOMAIN,gs-loc.apple.com,DIRECT
+  - DOMAIN,mvod.itunes.apple.com,DIRECT
+  - DOMAIN,streamingaudio.itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
+  - DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
+  - DOMAIN-SUFFIX,ls.apple.com,DIRECT
+  - PROCESS-NAME,trustd,DIRECT
+  - RULE-SET,Streaming,📺 国际影视
+  - RULE-SET,CNTV,📽️ 内地影视
+  - RULE-SET,gfw,🚀 节点选择
+  - DOMAIN-SUFFIX,bing.com,🚀 节点选择
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - MATCH,🚀 节点选择
