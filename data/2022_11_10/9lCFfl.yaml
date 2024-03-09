@@ -48,7 +48,7 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-    
+    tls: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
