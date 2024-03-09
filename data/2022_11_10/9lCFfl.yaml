@@ -38,21 +38,35 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: CL
+    ws-opts:
+      path: /
+    server: cl.shii69.top
+    port: 8355
+    uuid: 955e453a-ebeb-4aaa-bbd8-e631edf8f3e4
+    alterId: 64
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - US
+      - CL
       - DIRECT
   - name: 📺 国际影视
     type: select
     proxies:
       - US
+      - CL
       - DIRECT
   - name: 📽️ 内地影视
     type: select
     proxies:
       - US
+      - CL
       - DIRECT
 rule-providers:
   Streaming:
