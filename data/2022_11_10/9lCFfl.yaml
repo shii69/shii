@@ -43,8 +43,8 @@ proxies:
     ws-opts:
       path: /
     server: xxx.shii69.top
-    port: 8355
-    uuid: 955e453a-ebeb-4aaa-bbd8-e631edf8f3e4
+    port: 43345
+    uuid: a3e0db69-3eac-4eab-96eb-aa0a62ccbde9
     alterId: 0
     cipher: auto
     network: ws
