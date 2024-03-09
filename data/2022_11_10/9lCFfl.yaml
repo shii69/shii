@@ -40,7 +40,7 @@ proxies:
     tls: true
   - type: vmess
     name: CL
-    ws-opts:xxx.shii69.top
+    ws-opts:
       path: /addd
     server: xxx.shii69.top
     port: 8443
