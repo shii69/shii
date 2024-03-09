@@ -8,6 +8,7 @@ external-controller: ':9090'
 proxies:
   - {"type":"http","name":"http_proxy","server":"155.248.169.205","port":70,"udp":true}
   - {"type":"vmess","name":"US","ws-opts":{"path":"/"},"server":"rn.shii69.top","port":443,"uuid":"5169f280-7d45-44ba-bba2-673fc3c13746","alterId":64,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"US","ws-opts":{"path":"/"},"server":"cl.shii69.top","port":8355,"uuid":"955e453a-ebeb-4aaa-bbd8-e631edf8f3e4","alterId":64,"cipher":"auto","network":"ws","tls":true}
 proxy-providers:
  NeteaseMusic:
     type: http
