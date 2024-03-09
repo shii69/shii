@@ -41,7 +41,7 @@ proxies:
   - type: vmess
     name: CL
     ws-opts:
-      path: /
+      path: /addd
     server: xxx.shii69.top
     port: 43345
     uuid: a3e0db69-3eac-4eab-96eb-aa0a62ccbde9
