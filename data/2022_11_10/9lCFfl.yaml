@@ -42,13 +42,13 @@ proxies:
     name: CL
     ws-opts:
       path: /
-    server: cl.shii69.top
+    server: xxx.shii69.top
     port: 8355
     uuid: 955e453a-ebeb-4aaa-bbd8-e631edf8f3e4
     alterId: 0
     cipher: auto
     network: ws
-    
+    tls: false
 proxy-groups:
   - name: 🚀 节点选择
     type: select
