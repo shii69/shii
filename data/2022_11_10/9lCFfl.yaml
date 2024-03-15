@@ -42,7 +42,7 @@ proxies:
     name: CL
     ws-opts:
       path: /addd
-    server: xxx.shii69.top
+    server: cl.shii69.top
     port: 443
     uuid: 302d88d1-f48f-4454-e4e5-ae9c61713302
     alterId: 0
