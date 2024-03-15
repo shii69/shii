@@ -39,12 +39,12 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: CL
+    name: XYZ
     ws-opts:
-      path: /addd
-    server: cl.shii69.top
+      path: /dddd
+    server: xyz.shii69.top
     port: 443
-    uuid: 302d88d1-f48f-4454-e4e5-ae9c61713302
+    uuid: 76467b1c-ec62-4bd0-b8c5-2c227be365ec
     alterId: 0
     cipher: auto
     network: ws
@@ -54,19 +54,19 @@ proxy-groups:
     type: select
     proxies:
       - US
-      - CL
+      - XYZ
       - DIRECT
   - name: 📺 国际影视
     type: select
     proxies:
       - US
-      - CL
+      - XYZ
       - DIRECT
   - name: 📽️ 内地影视
     type: select
     proxies:
       - US
-      - CL
+      - XYZ
       - DIRECT
 rule-providers:
   Streaming:
