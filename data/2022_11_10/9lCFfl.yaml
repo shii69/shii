@@ -38,7 +38,7 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
+  - type: vless
     name: XYZ
     ws-opts:
       path: /dddd
