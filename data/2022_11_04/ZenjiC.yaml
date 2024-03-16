@@ -27,7 +27,7 @@ proxy-groups:
     proxies:
       - http_proxy
       - US
-      - CL
+      - XYZ
     _index: 0
   - name: 🚀 节点选择
     type: select
@@ -37,7 +37,7 @@ proxy-groups:
       - DIRECT
       - http_proxy
       - US
-      - CL
+      - XYZ
     _index: 1
   - name: 🌍 国外媒体
     type: select
@@ -47,7 +47,7 @@ proxy-groups:
       - 🎯 全球直连
       - http_proxy
       - US
-      - CL
+      - XYZ
   - name: 📲 电报信息
     type: select
     proxies:
@@ -70,7 +70,7 @@ proxy-groups:
       - Proxy
       - http_proxy
       - US
-      
+      -XYZ
     type: select
   - name: 网易云
     use:
@@ -78,7 +78,7 @@ proxy-groups:
     proxies:
       - http_proxy
       - US
-      
+      -XYZ
     type: select
   - name: 📢 谷歌FCM
     type: select
