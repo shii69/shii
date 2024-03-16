@@ -8,7 +8,7 @@ external-controller: ':9090'
 proxies:
   - {"type":"http","name":"http_proxy","server":"155.248.169.205","port":70,"udp":true}
   - {"type":"vmess","name":"US","ws-opts":{"path":"/"},"server":"rn.shii69.top","port":443,"uuid":"5169f280-7d45-44ba-bba2-673fc3c13746","alterId":64,"cipher":"auto","network":"ws","tls":true}
-  - {"type":"vless","name":"xyz","ws-opts":{"path":"/dddd"},"server":"xyz.shii69.top","port":443,"uuid":"76467b1c-ec62-4bd0-b8c5-2c227be365ec","alterId":0,"cipher":"auto","network":"ws","tls":true}
+ 
 proxy-providers:
  NeteaseMusic:
     type: http
@@ -27,7 +27,7 @@ proxy-groups:
     proxies:
       - http_proxy
       - US
-      - xyz
+      
     _index: 0
   - name: 🚀 节点选择
     type: select
@@ -37,7 +37,7 @@ proxy-groups:
       - DIRECT
       - http_proxy
       - US
-      - xyz
+      
     _index: 1
   - name: 🌍 国外媒体
     type: select
@@ -47,7 +47,7 @@ proxy-groups:
       - 🎯 全球直连
       - http_proxy
       - US
-      - xyz
+      
   - name: 📲 电报信息
     type: select
     proxies:
@@ -70,7 +70,7 @@ proxy-groups:
       - Proxy
       - http_proxy
       - US
-      - xyz
+      
     type: select
   - name: 网易云
     use:
@@ -78,7 +78,7 @@ proxy-groups:
     proxies:
       - http_proxy
       - US
-      - xyz
+      
     type: select
   - name: 📢 谷歌FCM
     type: select
