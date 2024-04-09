@@ -37,7 +37,7 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: vless
+  
     
 proxy-groups:
   - name: 🚀 节点选择
